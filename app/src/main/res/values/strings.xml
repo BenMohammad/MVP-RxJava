@@ -8,4 +8,13 @@
     <string name="todo_completed">Completed</string>
     <string name="active">Active</string>
     <string name="empty_todo_list">Empty List</string>
+    <string name="create_account">Create Account</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="signin_loading">Loading</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="invalid_password">Invalid Password</string>
+    <string name="password">Password</string>
+    <string name="signUp">SignUp</string>
+    <string name="user_name">Username</string>
 </resources>

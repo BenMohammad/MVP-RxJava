@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.benmohammad.mvp_rxjava.App;
 import com.benmohammad.mvp_rxjava.di.component.ActivityComponent;
+import com.benmohammad.mvp_rxjava.di.component.DaggerActivityComponent;
 import com.benmohammad.mvp_rxjava.di.module.ActivityModule;
 
 public abstract class BaseFragment extends Fragment {

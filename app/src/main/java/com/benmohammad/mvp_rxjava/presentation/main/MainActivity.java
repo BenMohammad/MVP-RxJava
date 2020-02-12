@@ -18,6 +18,7 @@ import com.benmohammad.mvp_rxjava.R;
 import com.benmohammad.mvp_rxjava.data.model.Todo;
 import com.benmohammad.mvp_rxjava.presentation.adapters.SpacingItemDecoration;
 import com.benmohammad.mvp_rxjava.presentation.adapters.TodoAdapter;
+import com.benmohammad.mvp_rxjava.presentation.authentication.AuthenticationActivity;
 import com.benmohammad.mvp_rxjava.presentation.base.BaseActivity;
 import com.benmohammad.mvp_rxjava.utils.Constants;
 
@@ -68,7 +69,6 @@ public class MainActivity extends BaseActivity implements MainContract.View {
     @Override
     protected void initUi() {
         setUpRecyclerView();
-
     }
 
     public void load() {
@@ -197,7 +197,7 @@ public class MainActivity extends BaseActivity implements MainContract.View {
 
                     }
 
-                    (super).onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
+                    super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
                 }
             }
         };

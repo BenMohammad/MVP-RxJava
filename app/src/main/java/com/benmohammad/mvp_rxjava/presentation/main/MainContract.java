@@ -15,6 +15,7 @@ public interface MainContract {
         void removeTodoSuccess();
         void removeTodosFailure(String message);
         void showEmpty();
+        void navigateToAuthenticationScreen();
     }
 
     interface Presenter {
