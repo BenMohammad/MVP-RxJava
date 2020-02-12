@@ -1,4 +1,14 @@
 package com.benmohammad.mvp_rxjava.data.preferences;
 
-public class SharedPrefs {
+public interface SharedPrefs {
+
+    void setCurrentUserId(String userId);
+
+    String getCurrentUserId();
+
+    void setToken(String token);
+
+    String getToken();
+
+    void removeCredentials();
 }
