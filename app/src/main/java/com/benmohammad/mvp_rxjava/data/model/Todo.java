@@ -1,4 +1,4 @@
-package com.benmohammad.mvp_rxjava.data;
+package com.benmohammad.mvp_rxjava.data.model;
 
 import com.google.gson.annotations.SerializedName;
 
