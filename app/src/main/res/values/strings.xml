@@ -17,4 +17,8 @@
     <string name="password">Password</string>
     <string name="signUp">SignUp</string>
     <string name="user_name">Username</string>
+    <string name="doesnt_match">Doesnt math</string>
+    <string name="signup_loading">Signing up...</string>
+    <string name="splash_text">Splash</string>
+    <string name="confirmPassword">Password</string>
 </resources>

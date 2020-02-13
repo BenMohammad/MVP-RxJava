@@ -1,9 +1,9 @@
 package com.benmohammad.mvp_rxjava.presentation.main;
 
-import android.app.admin.SystemUpdatePolicy;
 
 import com.benmohammad.mvp_rxjava.data.TodoRepository;
 import com.benmohammad.mvp_rxjava.data.network.model.TodoRequest;
+import com.benmohammad.mvp_rxjava.di.ActivityScope;
 import com.benmohammad.mvp_rxjava.presentation.base.Presenter;
 import com.benmohammad.mvp_rxjava.utils.ValidationUtils;
 
@@ -13,6 +13,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 
+@ActivityScope
 public class CreateTodoPresenter extends Presenter<CreateTodoContract.View> implements CreateTodoContract.Presenter{
 
     private TodoRepository todoRepository;

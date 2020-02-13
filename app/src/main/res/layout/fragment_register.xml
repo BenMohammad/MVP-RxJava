@@ -71,7 +71,6 @@
 
         <EditText
             android:id="@+id/input_confirm_password"
-            style="@style/TextAppearance.App.TextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawablePadding="8dp"

@@ -20,6 +20,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import javax.inject.Inject;
 
+
 public class CreateTodoFragment extends DialogFragment implements CreateTodoContract.View {
 
     TextInputLayout tilText;
@@ -107,11 +108,5 @@ public class CreateTodoFragment extends DialogFragment implements CreateTodoCont
         mProgressDialog.hide();
     }
 
-    @Override
-    public void navigateToAuthenticationScreen() {
-        if(getActivity() instanceof MainActivity) {
-            ((MainActivity)getActivity()).load();
-            dismiss();
-        }
-    }
+
 }

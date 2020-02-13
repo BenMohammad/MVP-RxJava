@@ -16,8 +16,13 @@ import com.benmohammad.mvp_rxjava.di.component.ActivityComponent;
 import com.benmohammad.mvp_rxjava.di.component.DaggerActivityComponent;
 import com.benmohammad.mvp_rxjava.di.module.ActivityModule;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 public abstract class BaseFragment extends Fragment {
 
+
+    private Unbinder unbinder;
     private BaseActivity mActivity;
     private ActivityComponent activityComponent;
     @Override
@@ -36,7 +41,14 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(getFragmentLayout(), container, false);
+        unbinder = ButterKnife.bind(this, rootView);
         return rootView;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 
     @Override

@@ -44,9 +44,15 @@ public class AppModule {
     }
 
     @Provides
-    @ApplicationContext
+    @Singleton
     SharedPrefs provideSharedPrefs(@ApplicationContext Context context) {
         return new SharedPrefsHelper(context);
+    }
+
+    @Provides
+    @ApplicationContext
+    Context context() {
+        return mApplication;
     }
 
     @Provides

@@ -3,6 +3,7 @@ package com.benmohammad.mvp_rxjava.presentation.authentication;
 import com.benmohammad.mvp_rxjava.data.UserRepository;
 import com.benmohammad.mvp_rxjava.data.network.model.AuthResponse;
 import com.benmohammad.mvp_rxjava.data.network.model.RegisterRequest;
+import com.benmohammad.mvp_rxjava.di.ActivityScope;
 import com.benmohammad.mvp_rxjava.presentation.base.Presenter;
 import com.benmohammad.mvp_rxjava.utils.ErrorUtils;
 import com.benmohammad.mvp_rxjava.utils.ValidationUtils;
@@ -13,6 +14,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 
+@ActivityScope
 public class RegisterPresenter extends Presenter<RegisterContract.View> implements RegisterContract.Presenter {
 
     private UserRepository userRepository;
