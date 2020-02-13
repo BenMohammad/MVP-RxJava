@@ -48,13 +48,6 @@ public class MainActivity extends BaseActivity implements MainContract.View {
     @Inject
     TodoAdapter todoAdapter;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-    }
 
     @Override
     protected int getLayout() {
@@ -75,6 +68,8 @@ public class MainActivity extends BaseActivity implements MainContract.View {
         mainPresenter.getTodos();
 
     }
+
+
 
 
     @OnClick(R.id.fab_add)
