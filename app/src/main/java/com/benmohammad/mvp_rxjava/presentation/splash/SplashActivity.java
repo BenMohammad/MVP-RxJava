@@ -80,4 +80,6 @@ public class SplashActivity extends BaseActivity implements SplashContract.View 
     public void hideLoading() {
 
     }
+
+
 }

@@ -19,7 +19,7 @@ import butterknife.OnClick;
 public class LoginFragment extends BaseFragment implements LoginContract.View {
 
 
-    @BindView(R.id.til_text)
+    @BindView(R.id.til_email)
     TextInputLayout tilEmail;
 
     @BindView(R.id.til_password)
@@ -92,7 +92,7 @@ public class LoginFragment extends BaseFragment implements LoginContract.View {
     }
 
     @OnClick(R.id.create_account)
-    public void createAccount() {
+    public void createAccountClick() {
         fragmentManager.beginTransaction()
                 .setCustomAnimations(R.anim.right_enter, R.anim.left_out)
                 .replace(R.id.frame_container, new RegisterFragment(), Constants.REGISTER_FRAGMENT)

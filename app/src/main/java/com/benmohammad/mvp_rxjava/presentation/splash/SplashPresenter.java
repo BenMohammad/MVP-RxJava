@@ -16,6 +16,7 @@ import io.reactivex.schedulers.Schedulers;
 public class SplashPresenter extends Presenter<SplashContract.View> implements SplashContract.Presenter {
 
     private UserRepository userRepository;
+
     @Inject
     public SplashPresenter(CompositeDisposable compositeDisposable, UserRepository userRepository) {
         super(compositeDisposable);

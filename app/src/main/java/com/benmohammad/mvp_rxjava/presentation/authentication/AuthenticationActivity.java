@@ -53,7 +53,5 @@ public class AuthenticationActivity extends BaseActivity {
         } else {
             super.onBackPressed();
         }
-
-
     }
 }

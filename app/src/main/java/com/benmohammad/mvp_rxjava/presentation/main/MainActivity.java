@@ -71,7 +71,6 @@ public class MainActivity extends BaseActivity implements MainContract.View {
 
 
 
-
     @OnClick(R.id.fab_add)
     public void onFabClicked() {
         DialogFragment dialogFragment = CreateTodoFragment.newInstance();

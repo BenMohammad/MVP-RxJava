@@ -19,6 +19,7 @@ import com.benmohammad.mvp_rxjava.di.module.ActivityModule;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
+
 public abstract class BaseFragment extends Fragment {
 
 

@@ -2,7 +2,8 @@ package com.benmohammad.mvp_rxjava.utils;
 
 public class Constants {
 
-    public static final String BASE_URL = "http://10.0.0.2:3000";
+    //public static final String BASE_URL = "http://10.0.0.2:3000";
+    public static final String BASE_URL = "http://192.168.8.36:3000/";
     public static final String PREF_FILE_NAME = "todoApp_prefs";
 
     public static final int SPLASH_TIME = 2000;

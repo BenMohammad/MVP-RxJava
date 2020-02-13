@@ -18,16 +18,20 @@ import com.benmohammad.mvp_rxjava.di.component.DaggerActivityComponent;
 import com.benmohammad.mvp_rxjava.di.module.ActivityModule;
 import com.google.android.material.snackbar.Snackbar;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 public abstract class BaseActivity extends AppCompatActivity {
 
     protected String TAG = getClass().getSimpleName();
     ActivityComponent mActivityComponent;
-
+    private Unbinder unbinder;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayout());
+        unbinder = ButterKnife.bind(this);
 
         mActivityComponent = DaggerActivityComponent.builder()
                 .appComponent(App.get(this).component())
@@ -63,5 +67,9 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
+    }
 }

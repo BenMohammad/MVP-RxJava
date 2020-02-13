@@ -20,9 +20,15 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import javax.inject.Inject;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 
 public class CreateTodoFragment extends DialogFragment implements CreateTodoContract.View {
 
+
+    @BindView(R.id.til_text)
     TextInputLayout tilText;
     private ProgressDialog mProgressDialog;
     private Button btnSave;
@@ -56,13 +62,7 @@ public class CreateTodoFragment extends DialogFragment implements CreateTodoCont
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_create_todo, container, false);
-        tilText = view.findViewById(R.id.til_text);
-        btnSave = view.findViewById(R.id.btn_save);
-
-        btnSave.setOnClickListener(v -> {
-            String text = tilText.getEditText().getText().toString();
-            mPresenter.saveTodo(text);
-        });
+        ButterKnife.bind(this, view);
         return view;
     }
 
@@ -72,7 +72,18 @@ public class CreateTodoFragment extends DialogFragment implements CreateTodoCont
         super.onResume();
     }
 
+    @Override
+    public void onDestroy() {
+        mPresenter.detachView();
+        super.onDestroy();
 
+    }
+
+    @OnClick(R.id.btn_save)
+    public void saveClick() {
+        String text = tilText.getEditText().getText().toString();
+        mPresenter.saveTodo(text);
+    }
 
     @Override
     public void onDestroyView() {
